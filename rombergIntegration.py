@@ -1,5 +1,8 @@
 import numpy as np
 
+def func(x):
+        return np.exp(-x**2)
+      
 def trapezcomp(f, a, b, n):
     """
     INPUTS:
@@ -38,12 +41,11 @@ def romberg(f, a, b, p):
         print(I[k,0:k+1])
 
     return I
-
-
-if __name__ == '__main__':
-    def func(x):
-        return np.exp(-x**2)
-
+  
+def main():
     I = romberg(func, 0, 3, 5)
     solution = I[4, 4]
     print(solution)
+
+if __name__ == '__main__':
+    main()

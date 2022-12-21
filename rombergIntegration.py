@@ -44,6 +44,6 @@ if __name__ == '__main__':
     def func(x):
         return np.exp(-x**2)
 
-    I = romberg(func, 0, 4, 5)
+    I = romberg(func, 0, 3, 5)
     solution = I[4, 4]
     print(solution)
